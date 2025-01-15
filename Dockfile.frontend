@@ -1,0 +1,17 @@
+FROM ubuntu:20.04
+
+WORKDIR /app
+
+# 更新包列表并安装构建工具和Qt库
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    qt5-qmake \
+    qtbase5-dev \
+    qttools5-dev-tools \  
+    cmake \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY internal/frontend/ /app
+RUN cmake . && make
+
+CMD ["./frontend"]

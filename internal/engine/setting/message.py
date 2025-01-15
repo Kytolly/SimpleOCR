@@ -1,0 +1,11 @@
+global SUCCESS, ERROR
+
+SUCCESS = 100
+
+ERROR = 500
+
+# 识别模块错误:1000+xx
+ERROR_OCR = 1001
+
+# 输出模块错误:2000+xx
+ERROR_OUTPUT_EMPTY = 2001

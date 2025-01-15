@@ -1,0 +1,6 @@
+coding: 'utf-8'
+stdHeight: 100
+serverHost: 'tcp://*:'
+tcpPort: '5555'
+# imgLocal: /home/kytolly/Project/PythonProject/OCR-uestc/internal/engine/cache
+imgLocal: cache

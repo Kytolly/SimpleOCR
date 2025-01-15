@@ -1,0 +1,18 @@
+version: '27.3.1'
+
+services:
+  ocr_module:
+    build:
+      context: .
+      dockerfile: Dockfile.ocrModule
+    ports:
+      - "5555:5555"  
+
+  qt_frontend:
+    build:
+      context: .
+      dockerfile: Dockfile.frontend
+    environment:
+      - DISPLAY
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix 
